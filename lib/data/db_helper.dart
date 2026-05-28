@@ -21,11 +21,11 @@ class DbHelper {
   Database? _db;
 
   Future<Database> getDB() async {
-    _db ??= await opneDB();
+    _db ??= await openDB();
     return _db!;
   }
 
-  Future<Database> opneDB() async {
+  Future<Database> openDB() async {
     Directory appDocDir = await getApplicationDocumentsDirectory();
 
     String dbPath = join(appDocDir.path, 'todoBD.db');
